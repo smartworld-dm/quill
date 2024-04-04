@@ -1,5 +1,8 @@
 import withMDX from '@next/mdx';
 import env from './env.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 /** @type {import('next').NextConfig} */
 export default withMDX()({

@@ -1,6 +1,6 @@
 {
   "name": "quill-monorepo",
-  "version": "2.0.0-rc.4",
+  "version": "2.0.0-rc.5",
   "description": "Quill development environment",
   "private": true,
   "author": "Jason Chen <jhchen7@gmail.com>",
@@ -23,10 +23,10 @@
     "url": "https://github.com/quilljs/quill/issues"
   },
   "scripts": {
-    "build": "run-p build:*",
+    "build": "node api.js && run-p build:*",
     "build:quill": "npm run build -w quill",
     "build:website": "npm run build -w website",
-    "start": "run-p start:*",
+    "start": "node api.js && run-p start:*",
     "start:quill": "npm start -w quill",
     "start:website": "NEXT_PUBLIC_LOCAL_QUILL=true npm start -w website",
     "lint": "npm run lint -ws"
